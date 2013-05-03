@@ -55,7 +55,11 @@
     UIButton *dateBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     if (dateBtn)
     {
-        
+        dateBtn.tag = 1;
+        dateBtn.frame = CGRectMake(100.0f, 500.0f, 90.0f, 30.0f);
+        [dateBtn setTitle:@"Show Date" forState:UIControlStateNormal];
+        [dateBtn addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:dateBtn];
     }
     
     [super viewDidLoad];
