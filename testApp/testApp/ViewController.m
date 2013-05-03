@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 
+#define BUTTON_ZERO 0
+#define BUTTON_ONE 1
+
 @interface ViewController ()
 
 @end
@@ -36,7 +39,7 @@
     UIButton *loginBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     if (loginBtn)
     {
-        loginBtn.tag = 0;
+        loginBtn.tag = BUTTON_ZERO;
         loginBtn.frame = CGRectMake(500.0f, 350.0f, 90.0f, 30.0f);
         [loginBtn setTitle:@"Login" forState:UIControlStateNormal];
         [loginBtn addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -56,7 +59,7 @@
     UIButton *dateBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     if (dateBtn)
     {
-        dateBtn.tag = 1;
+        dateBtn.tag = BUTTON_ONE;
         dateBtn.frame = CGRectMake(309.0f, 500.0f, 150.0f, 80.0f);
         [dateBtn setTitle:@"Show Date" forState:UIControlStateNormal];
         dateBtn.titleLabel.font = [UIFont systemFontOfSize:20.0f];
@@ -70,7 +73,7 @@
 
 - (void)onClick:(UIButton*)button
 {
-    if (button.tag == 0)
+    if (button.tag == BUTTON_ZERO)
     {
         NSString *checkInput = [userNameInput text];
         NSMutableString *message = [[NSMutableString alloc] initWithCapacity:50];
@@ -81,6 +84,11 @@
             enterName.text = @"Username cannot be empty!";
         }
     }
+    else if (button.tag == BUTTON_ONE)
+    {
+        
+    }
+
 }
 
 - (void)didReceiveMemoryWarning
