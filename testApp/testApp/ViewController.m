@@ -29,6 +29,7 @@
     {
         userNameInput.borderStyle = UITextBorderStyleRoundedRect;
         userNameInput.font = [UIFont systemFontOfSize:20.0f];
+        userNameInput.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
         [self.view addSubview:userNameInput];
     }
     
