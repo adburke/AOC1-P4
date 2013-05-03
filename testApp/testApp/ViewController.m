@@ -56,7 +56,7 @@
     if (dateBtn)
     {
         dateBtn.tag = 1;
-        dateBtn.frame = CGRectMake(350.0f, 500.0f, 150.0f, 80.0f);
+        dateBtn.frame = CGRectMake(309.0f, 500.0f, 150.0f, 80.0f);
         [dateBtn setTitle:@"Show Date" forState:UIControlStateNormal];
         dateBtn.titleLabel.font = [UIFont systemFontOfSize:20.0f];
         [dateBtn addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -69,13 +69,16 @@
 
 - (void)onClick:(UIButton*)button
 {
-    NSString *checkInput = [userNameInput text];
-    NSMutableString *message = [[NSMutableString alloc] initWithCapacity:50];
-    if (checkInput.length != 0) {
-        [message appendFormat:@"User: %@ has been logged in.", checkInput];
-        enterName.text = message;
-    } else {
-        enterName.text = @"Username cannot be empty!";
+    if (button.tag == 0)
+    {
+        NSString *checkInput = [userNameInput text];
+        NSMutableString *message = [[NSMutableString alloc] initWithCapacity:50];
+        if (checkInput.length != 0) {
+            [message appendFormat:@"User: %@ has been logged in.", checkInput];
+            enterName.text = message;
+        } else {
+            enterName.text = @"Username cannot be empty!";
+        }
     }
 }
 
