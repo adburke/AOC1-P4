@@ -32,6 +32,16 @@
         [self.view addSubview:userNameInput];
     }
     
+    UIButton *loginBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    if (loginBtn)
+    {
+        loginBtn.tag = 0;
+        loginBtn.frame = CGRectMake(500.0f, 350.0f, 90.0f, 30.0f);
+        [loginBtn setTitle:@"Login" forState:UIControlStateNormal];
+        [loginBtn addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:loginBtn];
+    }
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
