@@ -42,6 +42,16 @@
         [self.view addSubview:loginBtn];
     }
     
+    enterName = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 400.0f, 768.0f, 60.0f)];
+    if (enterName) {
+        enterName.font = [UIFont boldSystemFontOfSize:25.0f];
+        enterName.text = @"Please Enter Username";
+        enterName.textColor = [UIColor blueColor];
+        enterName.backgroundColor = [UIColor lightGrayColor];
+        enterName.textAlignment = NSTextAlignmentCenter;
+        [self.view addSubview:enterName];
+    }
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }

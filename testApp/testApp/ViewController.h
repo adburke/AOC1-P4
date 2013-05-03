@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 {
-  UITextField *userNameInput;  
+    UITextField *userNameInput;
+    UILabel *enterName;
 }
 @end
