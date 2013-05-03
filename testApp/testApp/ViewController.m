@@ -87,10 +87,17 @@
     else if (button.tag == BUTTON_ONE)
     {
         NSDate *date = [NSDate date];
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Date" message:date delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-        if (alertView)
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        if (dateFormat)
         {
-            [alertView show];
+            [dateFormat setDateFormat:@"MMMM d, yyyy"];
+            NSString *dateString = [[NSString alloc] initWithString:[dateFormat stringFromDate:date]];
+            
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Date" message:dateString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            if (alertView)
+            {
+                [alertView show];
+            }
         }
     }
 
