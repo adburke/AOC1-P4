@@ -10,6 +10,7 @@
 
 #define BUTTON_ZERO 0
 #define BUTTON_ONE 1
+#define BUTTON_THREE 2
 
 @interface ViewController ()
 
@@ -67,6 +68,13 @@
         [self.view addSubview:dateBtn];
     }
     
+    UIButton *infoBtn = [UIButton buttonWithType:UIButtonTypeInfoDark];
+    if (infoBtn) {
+        infoBtn.tag = BUTTON_THREE;
+        infoBtn.frame = CGRectMake(50.0f, 800.0f, 25.0f, 50.0f);
+        [self.view addSubview:infoBtn];
+    }
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -99,6 +107,10 @@
                 [alertView show];
             }
         }
+    }
+    else if (button.tag == BUTTON_THREE)
+    {
+        
     }
 
 }
