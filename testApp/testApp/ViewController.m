@@ -56,6 +56,18 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)onClick:(UIButton*)button
+{
+    NSString *checkInput = [userNameInput text];
+    NSMutableString *message = [[NSMutableString alloc] initWithCapacity:50];
+    if (checkInput.length != 0) {
+        [message appendFormat:@"User: %@ has been logged in.", checkInput];
+        enterName.text = message;
+    } else {
+        enterName.text = @"Username cannot be empty!";
+    }
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
