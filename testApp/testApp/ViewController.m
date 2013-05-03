@@ -52,6 +52,12 @@
         [self.view addSubview:enterName];
     }
     
+    UIButton *dateBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    if (dateBtn)
+    {
+        
+    }
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
