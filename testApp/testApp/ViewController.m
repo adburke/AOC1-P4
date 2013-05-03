@@ -56,8 +56,9 @@
     if (dateBtn)
     {
         dateBtn.tag = 1;
-        dateBtn.frame = CGRectMake(100.0f, 500.0f, 90.0f, 30.0f);
+        dateBtn.frame = CGRectMake(350.0f, 500.0f, 150.0f, 80.0f);
         [dateBtn setTitle:@"Show Date" forState:UIControlStateNormal];
+        dateBtn.titleLabel.font = [UIFont systemFontOfSize:20.0f];
         [dateBtn addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:dateBtn];
     }
