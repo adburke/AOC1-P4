@@ -16,6 +16,15 @@
 
 - (void)viewDidLoad
 {
+    UILabel *inputLabel = [[UILabel alloc] initWithFrame:CGRectMake(150.0f, 300.0f, 150.0f, 40.0f)];
+    if (inputLabel)
+    {
+        inputLabel.font = [UIFont boldSystemFontOfSize:25.0f];
+        inputLabel.text = @"Username:";
+        [self.view addSubview:inputLabel];
+    }
+    
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
