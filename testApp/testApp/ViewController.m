@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad
 {
+    // Username Label
     UILabel *inputLabel = [[UILabel alloc] initWithFrame:CGRectMake(150.0f, 300.0f, 150.0f, 40.0f)];
     if (inputLabel)
     {
@@ -27,7 +28,7 @@
         inputLabel.text = @"Username:";
         [self.view addSubview:inputLabel];
     }
-    
+    // Username Input Box
     userNameInput = [[UITextField alloc] initWithFrame:CGRectMake(290.0f, 300.0f, 300.0f, 40.0f)];
     if (userNameInput)
     {
@@ -36,7 +37,7 @@
         userNameInput.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
         [self.view addSubview:userNameInput];
     }
-    
+    // Login Button
     UIButton *loginBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     if (loginBtn)
     {
@@ -46,7 +47,7 @@
         [loginBtn addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:loginBtn];
     }
-    
+    // Message Label
     enterName = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 400.0f, 768.0f, 60.0f)];
     if (enterName) {
         enterName.font = [UIFont boldSystemFontOfSize:25.0f];
@@ -56,7 +57,7 @@
         enterName.textAlignment = NSTextAlignmentCenter;
         [self.view addSubview:enterName];
     }
-    
+    // Date Button
     UIButton *dateBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     if (dateBtn)
     {
@@ -67,7 +68,7 @@
         [dateBtn addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:dateBtn];
     }
-    
+    // Info Button
     UIButton *infoBtn = [UIButton buttonWithType:UIButtonTypeInfoDark];
     if (infoBtn)
     {
@@ -76,7 +77,7 @@
         [infoBtn addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:infoBtn];
     }
-    
+    // Info Label
     infoLabel = [[UILabel alloc] initWithFrame:CGRectMake(50.0f, 850.0f, 580.0f, 60.0f)];
     if (infoLabel)
     {
@@ -93,6 +94,7 @@
 
 - (void)onClick:(UIButton*)button
 {
+    // Login Button Pressed
     if (button.tag == BUTTON_ZERO)
     {
         NSString *checkInput = [userNameInput text];
@@ -104,6 +106,7 @@
             enterName.text = @"Username cannot be empty!";
         }
     }
+    // Date Button Pressed
     else if (button.tag == BUTTON_ONE)
     {
         NSDate *date = [NSDate date];
@@ -120,6 +123,7 @@
             }
         }
     }
+    // Info Button Pressed
     else if (button.tag == BUTTON_TWO)
     {
         infoLabel.text = @"This application was created by: Aaron Burke";
