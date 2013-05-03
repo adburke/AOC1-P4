@@ -90,7 +90,7 @@
         NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
         if (dateFormat)
         {
-            [dateFormat setDateFormat:@"MMMM d, yyyy"];
+            [dateFormat setDateFormat:@"MMMM d, yyyy HH:mm:ss a \r zzzz"];
             NSString *dateString = [[NSString alloc] initWithString:[dateFormat stringFromDate:date]];
             
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Date" message:dateString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
