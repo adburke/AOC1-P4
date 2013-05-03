@@ -73,16 +73,16 @@
     {
         infoBtn.tag = BUTTON_TWO;
         infoBtn.frame = CGRectMake(50.0f, 800.0f, 25.0f, 50.0f);
+        [infoBtn addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:infoBtn];
     }
     
-    infoLabel = [[UILabel alloc] initWithFrame:CGRectMake(50.0f, 850.0f, 500.0f, 60.0f)];
+    infoLabel = [[UILabel alloc] initWithFrame:CGRectMake(50.0f, 850.0f, 580.0f, 60.0f)];
     if (infoLabel)
     {
-        infoLabel.text = @"test";
+        infoLabel.text = @"";
         infoLabel.font = [UIFont systemFontOfSize:25.0f];
         infoLabel.textColor = [UIColor greenColor];
-        infoLabel.textAlignment = NSTextAlignmentCenter;
         [self.view addSubview:infoLabel];
     }
         
@@ -122,7 +122,7 @@
     }
     else if (button.tag == BUTTON_TWO)
     {
-        infoLabel.text = @"Testing";
+        infoLabel.text = @"This application was created by: Aaron Burke";
     }
 
 }
